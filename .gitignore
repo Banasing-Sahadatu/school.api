@@ -1,0 +1,5 @@
+node_modules
+
+DB_URL=mongodb+srv://Sahadatu:sahada?12@cluster0.7iyudw9.mongodb.net/schoolAPI?retryWrites=true&w=majority
+
+.env
