@@ -9,7 +9,7 @@ dotenv.config();
 connectDB();
 
 app.use(express.json())
-app.use('/users', userRoute)
+app.use('/api/users', userRoute)
 app.use(morgan('dev'))
 
 app.get('/', (req, res) => {
