@@ -1,7 +1,7 @@
 const User = require('../models/userSchema')
 const bcrypt = require('bcrypt');
 const { validate } = require('../config/Validator');
-const {generateToken} =requires("../utils/generateToken")
+const {generateToken} =require("../utils/generateToken")
 
 // adding a user
 const addUser = async (req, res) => {
@@ -16,11 +16,11 @@ const addUser = async (req, res) => {
             password: hashedPassword,
 
         });
-        if (user) {
+        if (User) {
             res.status(201).json({
                 username: User.username,
                 email: User, email,
-                id: User, _id,
+                id: User._id,
                 token: generateToken(User._id)
             });
 }
