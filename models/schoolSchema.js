@@ -1,45 +1,40 @@
 const mongoose = require("mongoose")
-const { string } = require("yup/lib/locale")
-const schoolschema = mongoose.Schema({
+
+const schoolSchema = mongoose.Schema({
     schoolname: {
-        type: string,
+        type: String,
         required: true,
         unique: true
     },
     location: {
-        type: string,
+        type: String,
         required: true
         
     },
     category: {
-        type: string,
+        type: String,
         required: true
     },
     facilities: {
         type: Array,
         required: true,
-        maxlength:3
-
     },
     numOfStudents: {
-        type: num,
+        type: Number,
         required: true
     },
     address: {
-        gps: string,
-        box: string
+        gps: String,
+        box: String
     },
     contact: {
-        phone: string,
-        email:string
+        phone: String,
+        email:String
     }
-
-
-
 
 }, {
     timestamp:true
-}
-)
+})
+
 const School = mongoose.model("school", schoolSchema)
-module.exports=School
+module.exports = School

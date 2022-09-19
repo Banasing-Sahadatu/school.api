@@ -10,4 +10,26 @@ const createSchool = (req, res) => {
         address: req.body.address,
         contact: req.body.contact,
     })
+    newSchool.save();
+    res.status(200).json(newSchool)
 }
+
+//getting a school
+const getSchools = async (req, res) => {
+    const schools = await School.find();
+    res.status(200).json(schools);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+module.exports = { createSchool, getSchools }
